@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
-
+    
     :root {
         --primary: #EAA636;
         --secondary: #545454;
