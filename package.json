@@ -17,6 +17,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "6",
     "styled-components": "^6.0.7",
+    "swiper": "^10.1.0",
     "twin.macro": "^3.4.0"
   },
   "devDependencies": {
