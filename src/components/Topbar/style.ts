@@ -43,7 +43,7 @@ export const TopbarBreadcrumb = styled.nav`
 `;
 
 export const TopbarSocial = styled.nav`
-  ${tw`flex`}
+  ${tw`flex mr-2`}
 
   p {
     ${tw`text-white mr-5`}

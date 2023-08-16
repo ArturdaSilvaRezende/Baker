@@ -9,6 +9,7 @@ export const Hero = styled.section`
 
   .mySwiper {
     figure {
+      height: 100vh;
       z-index: -1;
       position: relative;
 
@@ -19,12 +20,17 @@ export const Hero = styled.section`
         z-index: 1;
       }
 
+      img {
+        height: 100vh;
+      }
+
       figcaption {
+        margin-top: 30px;
         position: absolute;
         top: 50%;
-        left: 40px;
+        left: 36px;
         transform: translateY(-50%);
-        width: 70%;
+        width: 50%;
         z-index: 2;
 
         p {
@@ -38,7 +44,7 @@ export const Hero = styled.section`
         h2 {
           color: var(--light);
           font-family: "Playfair Display", serif;
-          font-size: 6rem;
+          font-size: 5rem;
           font-weight: 700;
 
           span {
@@ -70,10 +76,17 @@ export const Hero = styled.section`
     }
   }
 
-  @media screen and (min-width: 767px) and (max-width: 992px) {
+  @media screen and (min-width: 768px) and (max-width: 992px) {
     .mySwiper {
       figure {
+        height: 50vh;
+
+        img {
+          height: 50vh;
+        }
         figcaption {
+          left: 25px;
+          margin-top: 20px;
           width: 90%;
 
           h2 {
@@ -97,7 +110,7 @@ export const Hero = styled.section`
     }
   }
 
-  @media screen and (min-width: 600px) and (max-width: 766px) {
+  @media screen and (min-width: 600px) and (max-width: 767px) {
     .mySwiper {
       figure {
         height: 50vh;
@@ -107,6 +120,7 @@ export const Hero = styled.section`
         }
 
         figcaption {
+          left: 25px;
           width: 100%;
 
           h2 {
@@ -141,7 +155,8 @@ export const Hero = styled.section`
         }
 
         figcaption {
-          left: 20px;
+          left: 25px;
+          margin-top: 5px;
           width: 100%;
 
           p {
@@ -204,16 +219,18 @@ export const HeroButtonsContainer = styled.div`
     button {
       color: var(--primary);
       transition: 0.4s ease;
-      position: relative;
+      position: absolute;
 
       &:first-child {
-        top: 47px;
-        left: -27px;
+        top: 50%;
+        left: -50px;
+        transform: translateY(-50%);
       }
 
       &:last-child {
-        top: -40px;
-        left: 27px;
+        top: 50%;
+        left: -15px;
+        transform: translateY(-50%);
       }
 
       &:hover {
@@ -221,7 +238,7 @@ export const HeroButtonsContainer = styled.div`
       }
 
       svg {
-        font-size: 5rem;
+        font-size: 4rem;
       }
     }
   }
@@ -234,13 +251,11 @@ export const HeroButtonsContainer = styled.div`
     .HeroButtons__contents {
       button {
         &:first-child {
-          top: 27px;
-          left: -15px;
+          left: -30px;
         }
 
         &:last-child {
-          top: -20px;
-          left: 15px;
+          left: -10px;
         }
 
         svg {
