@@ -3,26 +3,29 @@ import tw from "twin.macro";
 import { Dialog } from "@headlessui/react";
 
 export const Navbar = styled.header`
-  ${tw`container`}
+  ${tw`px-4`}
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 60px;
+  top: 90px;
   width: 100%;
   z-index: 998;
 
   @media screen and (min-width: 768px) and (max-width: 992px) {
-    top: 70px;
+    top: 80px;
   }
 
-  @media screen and (max-width: 767px) {
-    top: -20px;
+  @media screen and (min-width: 600px) and (max-width: 767px) {
+    top: 15px;
+  }
+
+  @media screen and (max-width: 599px) {
+    top: 10px;
   }
 `;
 
 export const HeaderNav = styled.nav`
-  ${tw`flex max-w-7xl items-center justify-between`}
-  padding: 20px 0;
+  ${tw`flex max-w-7xl items-center justify-between container m-auto`}
 
   .header__logo {
     ${tw`flex lg:flex-1 w-full`}
@@ -122,13 +125,7 @@ export const HeaderNav = styled.nav`
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 992px) {
-    padding: 20px;
-  }
-
   @media screen and (min-width: 600px) and (max-width: 767px) {
-    padding: 20px;
-
     .header__logo {
       .header__btn {
         button {
@@ -141,17 +138,11 @@ export const HeaderNav = styled.nav`
   }
 
   @media screen and (max-width: 599px) {
-    padding: 20px;
     z-index: -1;
 
     .header__logo {
       a {
         font-size: 2rem;
-      }
-
-      .header__bth {
-        button {
-        }
       }
     }
   }
@@ -160,14 +151,14 @@ export const HeaderNav = styled.nav`
 export const NavbarPanel = styled(Dialog.Panel)`
   z-index: 999;
 
-  ${tw`fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-2 
+  ${tw`fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-5 py-2 
     sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
 
   .header__dialog-logo {
     ${tw`flex items-center justify-between`}
 
     a {
-      ${tw`-m-1.5 p-1.5`}
+      ${tw`-m-1.5`}
       color: var(--primary);
       font-family: "Playfair Display", serif;
       font-size: 3rem;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 export const Hero = styled.section`
   position: relative;
@@ -25,12 +26,12 @@ export const Hero = styled.section`
       }
 
       figcaption {
+        ${tw`container pl-8`}
         margin-top: 30px;
         position: absolute;
         top: 50%;
-        left: 36px;
         transform: translateY(-50%);
-        width: 50%;
+        width: 100%;
         z-index: 2;
 
         p {
@@ -46,6 +47,7 @@ export const Hero = styled.section`
           font-family: "Playfair Display", serif;
           font-size: 5rem;
           font-weight: 700;
+          width: 50%;
 
           span {
             position: relative;
@@ -76,6 +78,31 @@ export const Hero = styled.section`
     }
   }
 
+  @media screen and (min-width: 993px) and (max-width: 1024px) {
+    .mySwiper {
+      figure {
+        figcaption {
+          ${tw`pl-4`}
+          width: 90%;
+
+          h2 {
+            font-size: 4rem;
+            width: 100%;
+
+            span {
+              position: static;
+            }
+          }
+
+          .hero__description {
+            margin-top: 10px;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .mySwiper {
       figure {
@@ -84,13 +111,15 @@ export const Hero = styled.section`
         img {
           height: 50vh;
         }
+
         figcaption {
-          left: 25px;
-          margin-top: 20px;
+          ${tw`pl-6`}
+          margin-top: 30px;
           width: 90%;
 
           h2 {
             font-size: 3.5rem;
+            width: 100%;
 
             span {
               position: static;
@@ -120,12 +149,13 @@ export const Hero = styled.section`
         }
 
         figcaption {
-          left: 25px;
+          ${tw`pl-5`}
           width: 100%;
 
           h2 {
-            font-size: 3rem;
+            font-size: 2.4rem;
             margin: 10px 0;
+            width: 100%;
 
             span {
               position: static;
@@ -155,9 +185,8 @@ export const Hero = styled.section`
         }
 
         figcaption {
-          left: 25px;
-          margin-top: 5px;
-          width: 100%;
+          ${tw`pl-5`}
+          margin-top: 15px;
 
           p {
             &:first-child {
@@ -166,8 +195,9 @@ export const Hero = styled.section`
           }
 
           h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin: 5px 0;
+            width: 100%;
 
             span {
               position: static;
@@ -175,7 +205,7 @@ export const Hero = styled.section`
           }
 
           .hero__description {
-            font-size: 14px;
+            font-size: 0.8rem;
             margin-top: 0;
             width: 80%;
           }
