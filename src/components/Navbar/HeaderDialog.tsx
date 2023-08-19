@@ -28,7 +28,7 @@ const HeaderDialog = (props: DialogType) => {
     >
       <div className="fixed inset-0 z-10" />
 
-      <C.NavbarPanel className="header__dialog fadeIn">
+      <C.NavbarPanel className="header__dialog fadeIn duration-1000">
         <div className="header__dialog-logo">
           <Link to="/">
             <span className="sr-only">Baker</span>

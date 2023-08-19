@@ -1,3 +1,4 @@
+import AboutUs from "../../components/AboutUs";
 import AnimatedCounter from "../../components/AnimatedCounter";
 import Navbar from "../../components/Navbar";
 import Topbar from "../../components/Topbar";
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <AnimatedCounter />
+      <AboutUs />
     </>
   );
 };

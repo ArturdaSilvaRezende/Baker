@@ -2,14 +2,18 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const AnimatedCounter = styled.section`
-  ${tw`container m-auto mt-32 mb-24`}
+  ${tw`container m-auto my-48`}
+
+  @media screen and (max-width: 767px) {
+    ${tw`mt-36 mb-20`}
+  }
 `;
 
 export const AnimatedCounterContainer = styled.div`
-  ${tw`container w-auto flex justify-evenly gap-2.5 `}
+  ${tw`container flex justify-evenly gap-2.5 `}
 
   .AnimatedCounter__item {
-    ${tw`text-center p-5 rounded-2xl w-1/4`}
+    ${tw`text-center p-5 rounded-2xl w-1/5`}
     background-color: var(--light);
 
     p {
