@@ -28,7 +28,7 @@ export const HeaderNav = styled.nav`
   ${tw`flex max-w-7xl items-center justify-between container m-auto`}
 
   .header__logo {
-    ${tw`flex lg:flex-1 w-full`}
+    ${tw`flex xl:flex-1 w-full`}
 
     color: var(--primary);
 
@@ -39,7 +39,7 @@ export const HeaderNav = styled.nav`
     }
 
     .header__btn {
-      ${tw`flex lg:hidden ml-auto mt-3`}
+      ${tw`flex xl:hidden ml-auto mt-3`}
 
       button {
         svg {
@@ -50,7 +50,7 @@ export const HeaderNav = styled.nav`
   }
 
   .header__popover {
-    ${tw`hidden lg:flex lg:gap-x-12 mt-5`}
+    ${tw`hidden xl:flex xl:gap-x-12 mt-5`}
 
     .header__popover-contents {
       ${tw`relative`}
@@ -98,7 +98,7 @@ export const HeaderNav = styled.nav`
   }
 
   .header__contactus {
-    ${tw`hidden lg:flex lg:flex-1 lg:justify-end items-center`}
+    ${tw`hidden xl:flex xl:flex-1 xl:justify-end items-center`}
 
     div {
       ${tw`mr-5 border border-white p-4 rounded-full`}
@@ -152,7 +152,7 @@ export const NavbarPanel = styled(Dialog.Panel)`
   z-index: 999;
 
   ${tw`fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-5 py-2 
-    sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+    md:max-w-sm md:ring-1 md:ring-gray-900/10`}
 
   .header__dialog-logo {
     ${tw`flex items-center justify-between`}

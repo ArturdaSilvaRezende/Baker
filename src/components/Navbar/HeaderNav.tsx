@@ -32,7 +32,7 @@ const HeaderNav = (props: MobileMenu) => {
           </button>
         </div>
       </div>
-      <div className="flex lg:hidden">
+      <div className="flex xl:hidden">
         <button type="button" onClick={() => props.setMobileMenuOpen(true)}>
           <span className="sr-only">Open main menu</span>
         </button>

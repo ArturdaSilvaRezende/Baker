@@ -32,6 +32,18 @@ const GlobalStyles = createGlobalStyle`
         display: block;
         width: 100%;
     }
+
+    .bg-yellow {
+        background-color: var(--primary);
+    }
+
+    .border-primary {
+        border: 1px solid var(--primary);
+    }
+
+    .border-white {
+        border: 1px solid var(--white);
+    }
     
     :root {
         --primary: #EAA636;
