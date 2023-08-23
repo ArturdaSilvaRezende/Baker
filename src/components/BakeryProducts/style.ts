@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 interface Props {
-  isActiveItem: boolean;
+  $isactiveitem: boolean;
 }
 
 export const BakeryProducts = styled.section`
@@ -10,7 +10,7 @@ export const BakeryProducts = styled.section`
 `;
 
 export const BakeryProductsContainer = styled.div`
-  ${tw`container w-11/12 mx-auto my-36`}
+  ${tw`container w-11/12 mx-auto mt-36`}
 `;
 
 export const BakeryProductsContact = styled.div`
@@ -107,8 +107,9 @@ export const ProductsCategoryContents = styled.div`
 
 export const CategoryFigure = styled.figure<Props>`
   ${tw`rounded-t-lg text-center shadow-xl sm:m-auto`}
+
   background-color: ${(props) =>
-    props.isActiveItem ? "var(--primary)" : "var(--white)"};
+    +props.$isactiveitem ? "var(--primary)" : "var(--white)"};
 
   & + figure {
     ${tw`sm:mt-24`}
@@ -119,8 +120,9 @@ export const CategoryFigure = styled.figure<Props>`
 
     button {
       ${tw`w-2/5 p-1 rounded `}
+
       background-color: ${(props) =>
-        props.isActiveItem ? "var(--white)" : "var(--primary)"};
+        +props.$isactiveitem ? "var(--white)" : "var(--primary)"};
 
       & + button {
         ${tw`ml-3`}
@@ -133,14 +135,17 @@ export const CategoryFigure = styled.figure<Props>`
   }
 
   figcaption {
-    color: ${(props) => (props.isActiveItem ? "text-white" : "text-black")};
+    color: ${(props) =>
+      +props.$isactiveitem ? "var(--white)" : "var(--dark)"};
 
     p {
       &:first-child {
         ${tw`p-2 w-40 m-auto mt-1`}
+
         border-radius: 30px;
         border: 1px solid
-          ${(props) => (props.isActiveItem ? "var(--white)" : "var(--primary)")};
+          ${(props) =>
+            +props.$isactiveitem ? "var(--white)" : "var(--primary)"};
       }
 
       &:last-child {
@@ -150,6 +155,7 @@ export const CategoryFigure = styled.figure<Props>`
 
     h3 {
       ${tw`font-bold my-5 text-3xl`}
+
       font-family: 'Playfair Display', serif;
     }
   }

@@ -7,14 +7,14 @@ export const ImgTwice = styled.div`
   img {
     ${tw`rounded-2xl relative`}
     width: 40%;
-    height: 370px;
+    height: 315px;
 
     &:first-child {
       left: 50px;
     }
 
     &:last-child {
-      left: 90px;
+      left: 70px;
       top: 150px;
     }
   }
@@ -27,10 +27,10 @@ export const ImgTwice = styled.div`
       border-radius: 6px;
       height: 60vh;
       position: absolute;
-      left: 10%;
+      left: 23%;
       top: 50%;
       transform: translateY(-50%);
-      width: 60%;
+      width: 50%;
       z-index: -1;
     }
   }

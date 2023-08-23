@@ -26,9 +26,9 @@ const ProductsCategoryContents = () => {
     <C.ProductsCategoryContents>
       {productsList.map((item) => (
         <C.CategoryFigure
+          $isactiveitem={isActiveContent(item.id)}
           key={item.id}
           className="category"
-          isActiveItem={isActiveContent(item.id)}
         >
           <div className="category__buttons">
             <button onClick={() => handleToggleShowContent(item.id)}>
