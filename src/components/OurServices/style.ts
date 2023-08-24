@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const OurServices = styled.section`
-  ${tw`container m-auto flex relative mt-24 mb-36`}
+  ${tw`container w-11/12 mx-auto flex justify-between relative mt-24`}
 
   @media screen and (max-width: 992px) {
     ${tw`flex-col`}
@@ -18,7 +18,7 @@ export const OurServicesDescription = styled.div`
   }
 
   .ourservices__title {
-    ${tw`mt-2 mb-5 font-bold text-5xl`}
+    ${tw`mt-2 mb-5 font-bold text-4xl`}
     font-family: "Playfair Display", serif;
   }
 

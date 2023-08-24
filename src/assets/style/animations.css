@@ -1,3 +1,5 @@
+/*============= animation - fade =============*/
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -23,14 +25,47 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
     display: none;
   }
 }
 
-/*============= animation height =============*/
+/*============= animation - slide =============*/
+
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+/*============= animation - height =============*/
 
 .showContentsHeight {
   animation-name: showContentsHeight;
