@@ -10,7 +10,7 @@ export const BakeryProducts = styled.section`
 `;
 
 export const BakeryProductsContainer = styled.div`
-  ${tw`container w-11/12 mx-auto mt-36`}
+  ${tw`container w-11/12 mx-auto mt-36 sm:pb-7 md:pb-3`}
 `;
 
 export const BakeryProductsContact = styled.div`

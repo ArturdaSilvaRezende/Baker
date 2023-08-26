@@ -2,7 +2,11 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const OurTeam = styled.section`
-  ${tw`container w-11/12 mx-auto mb-24 mt-5`}
+  ${tw`container w-11/12 mx-auto mb-32 mt-16 md:mt-5`}
+
+  @media screen and (max-width: 599px) {
+    ${tw`mt-1`}
+  }
 `;
 
 export const OurTeamContents = styled.div`

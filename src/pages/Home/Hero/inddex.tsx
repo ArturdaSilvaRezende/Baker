@@ -1,14 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft } from "react-icons/bs";
 import * as C from "./style";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 //carousel images
 import Carousel01 from "../../../assets/img/carousel-1.jpg";
@@ -70,10 +64,10 @@ const Hero = () => {
         <C.HeroButtonsContainer>
           <div className="HeroButtons__contents">
             <button className="image-swiper-button-prev">
-              <IoIosArrowBack />
+              <BsChevronLeft />
             </button>
             <button className="image-swiper-button-next">
-              <IoIosArrowForward />
+              <BsChevronRight />
             </button>
           </div>
         </C.HeroButtonsContainer>

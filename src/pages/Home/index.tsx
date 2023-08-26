@@ -1,6 +1,7 @@
 import AboutUs from "../../components/AboutUs";
 import AnimatedCounter from "../../components/AnimatedCounter";
 import BakeryProducts from "../../components/BakeryProducts";
+import ClientsReview from "../../components/ClientsReview";
 import Navbar from "../../components/Navbar";
 import OurServices from "../../components/OurServices";
 import OurTeam from "../../components/OurTeam";
@@ -9,7 +10,7 @@ import Hero from "./Hero/inddex";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Topbar />
       <Navbar />
       <Hero />
@@ -18,7 +19,8 @@ const Home = () => {
       <BakeryProducts />
       <OurServices />
       <OurTeam />
-    </>
+      <ClientsReview />
+    </main>
   );
 };
 

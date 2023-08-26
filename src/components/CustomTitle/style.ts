@@ -15,6 +15,11 @@ export const CustomTitle = styled.div`
     font-family: "Playfair Display", serif;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    h1 {
+      width: 60% !important;
+    }
+  }
   @media screen and (min-width: 600px) and (max-width: 767px) {
     h1 {
       width: 70% !important;

@@ -2,10 +2,14 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const AnimatedCounter = styled.section`
-  ${tw`container m-auto my-48`}
+  ${tw`container m-auto my-48 md:my-36`}
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 600px) and (max-width: 767px) {
     ${tw`mt-36 mb-20`}
+  }
+
+  @media screen and (max-width: 599px) {
+    ${tw`my-24`}
   }
 `;
 

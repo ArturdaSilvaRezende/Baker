@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const OurServices = styled.section`
-  ${tw`container w-11/12 mx-auto flex justify-between relative mt-24`}
+  ${tw`container w-11/12 mx-auto flex justify-between relative mt-24 sm:mt-16 md:mt-16`}
 
   @media screen and (max-width: 992px) {
     ${tw`flex-col`}
