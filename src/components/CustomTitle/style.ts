@@ -4,6 +4,10 @@ import tw from "twin.macro";
 export const CustomTitle = styled.div`
   ${tw`text-center py-24 sm:py-20`}
 
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 150px, 0);
+
   p {
     ${tw`uppercase text-lg mb-2 font-medium`}
     color: var(--primary);
@@ -20,9 +24,10 @@ export const CustomTitle = styled.div`
       width: 60% !important;
     }
   }
+
   @media screen and (min-width: 600px) and (max-width: 767px) {
     h1 {
-      width: 70% !important;
+      width: 60% !important;
     }
   }
 `;

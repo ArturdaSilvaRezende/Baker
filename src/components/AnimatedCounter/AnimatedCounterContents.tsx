@@ -1,3 +1,4 @@
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import AnimateCounterCounterUp from "./AnimateCounterCounterUp";
 import { FaCertificate } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
@@ -6,10 +7,12 @@ import { FaCartPlus } from "react-icons/fa";
 import * as C from "./style";
 
 const AnimatedCounterContents = () => {
+  useAnimateScroll();
+
   return (
     <C.AnimatedCounter>
       <C.AnimatedCounterContainer>
-        <div className="AnimatedCounter__item">
+        <div className="AnimatedCounter__item scroll-element">
           <p>
             <FaCertificate />
           </p>
@@ -17,7 +20,7 @@ const AnimatedCounterContents = () => {
           <AnimateCounterCounterUp finalValue={50} />
         </div>
 
-        <div className="AnimatedCounter__item">
+        <div className="AnimatedCounter__item scroll-element">
           <p>
             <FaUsers />
           </p>
@@ -25,7 +28,7 @@ const AnimatedCounterContents = () => {
           <AnimateCounterCounterUp finalValue={175} />
         </div>
 
-        <div className="AnimatedCounter__item">
+        <div className="AnimatedCounter__item scroll-element">
           <p>
             <FaBreadSlice />
           </p>
@@ -33,7 +36,7 @@ const AnimatedCounterContents = () => {
           <AnimateCounterCounterUp finalValue={135} />
         </div>
 
-        <div className="AnimatedCounter__item">
+        <div className="AnimatedCounter__item scroll-element">
           <p>
             <FaCartPlus />
           </p>

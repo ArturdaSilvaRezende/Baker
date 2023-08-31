@@ -1,9 +1,12 @@
 import { FaCheck } from "react-icons/fa";
 import * as C from "./style";
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 
 const AboutUsDescription = () => {
+  useAnimateScroll();
+
   return (
-    <C.AboutUsDescription>
+    <C.AboutUsDescription className="scroll-element">
       <p className="about__section">About Us</p>
       <h1 className="about__title">
         We Bake Every Item From The Core Of Our Hearts

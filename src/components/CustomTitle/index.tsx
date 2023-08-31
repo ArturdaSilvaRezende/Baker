@@ -1,3 +1,4 @@
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import * as C from "./style";
 
 interface CustomTitle {
@@ -6,8 +7,10 @@ interface CustomTitle {
 }
 
 const CustomTitle = (props: CustomTitle) => {
+  useAnimateScroll();
+
   return (
-    <C.CustomTitle>
+    <C.CustomTitle className="scroll-element">
       <p>{props.subtitle}</p>
       <h1>{props.title}</h1>
     </C.CustomTitle>

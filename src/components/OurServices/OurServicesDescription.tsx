@@ -1,3 +1,4 @@
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import { FaBreadSlice } from "react-icons/fa";
 import { FaBirthdayCake } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
@@ -5,8 +6,10 @@ import { FaTruck } from "react-icons/fa";
 import * as C from "./style";
 
 const OurServicesDescription = () => {
+  useAnimateScroll();
+
   return (
-    <C.OurServicesDescription>
+    <C.OurServicesDescription className="scroll-element">
       <p className="ourservices__section">Our Services</p>
       <h1 className="ourservices__title">What Do We Offer For You?</h1>
       <p className="ourservices__description">

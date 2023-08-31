@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const OurTeam = styled.section`
-  ${tw`container w-11/12 mx-auto mb-32 mt-16 md:mt-5`}
+  ${tw`container w-11/12 mx-auto mt-24 md:mt-5 sm:mt-5`}
 
   @media screen and (max-width: 599px) {
     ${tw`mt-1`}
@@ -11,6 +11,10 @@ export const OurTeam = styled.section`
 
 export const OurTeamContents = styled.div`
   ${tw`flex justify-center flex-wrap gap-4`}
+
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 200px, 0);
 
   figure {
     ${tw`rounded-b-lg relative pb-24`}

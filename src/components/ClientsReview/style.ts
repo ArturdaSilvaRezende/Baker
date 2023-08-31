@@ -2,12 +2,16 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const ClientsReview = styled.section`
-  ${tw`mt-16 mb-36`}
+  ${tw`my-16`}
   background-color: var(--light);
 `;
 
 export const ClientsReviewContainer = styled.div`
   ${tw`container w-11/12 mx-auto`}
+
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 200px, 0);
 
   .swiper-slide-active {
     .mySwiper__item {
@@ -100,6 +104,10 @@ export const ClientsReviewNewsletter = styled.div`
   ${tw`container w-11/12 mx-auto mt-24 rounded-md px-8 py-8 flex items-center justify-between 
   sm:flex-col sm:px-4 sm:py-4`}
   background-color: var(--primary);
+
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 150px, 0);
 
   h3 {
     ${tw`text-white font-bold text-5xl flex flex-col md:text-4xl

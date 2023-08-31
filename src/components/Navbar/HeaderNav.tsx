@@ -1,4 +1,5 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useRef } from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 import { Link } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import { FaPhone } from "react-icons/fa";
@@ -13,10 +14,13 @@ interface MobileMenu {
 
 const HeaderNav = (props: MobileMenu) => {
   const [isCaret, setIsCaret] = useState(false);
+  const caretRef = useRef<HTMLDivElement | null>(null);
 
   const isHandlePage = () => {
     setIsCaret(!isCaret);
   };
+
+  useClickOutside({ isCaret, setIsCaret, caret: caretRef });
 
   return (
     <C.HeaderNav aria-label="Global">
@@ -56,7 +60,9 @@ const HeaderNav = (props: MobileMenu) => {
             onClick={() => isHandlePage()}
           >
             Pages
-            <span>{isCaret ? <AiOutlineCaretUp /> : <AiFillCaretDown />}</span>
+            <span ref={caretRef}>
+              {isCaret ? <AiOutlineCaretUp /> : <AiFillCaretDown />}
+            </span>
           </Popover.Button>
 
           <Transition

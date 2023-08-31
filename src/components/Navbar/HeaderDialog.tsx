@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 import { Link } from "react-router-dom";
 import { Dialog, Disclosure } from "@headlessui/react";
 import { FaPhone } from "react-icons/fa";
@@ -15,10 +16,13 @@ interface DialogType {
 
 const HeaderDialog = (props: DialogType) => {
   const [isCaret, setIsCaret] = useState(false);
+  const caretRef = useRef<HTMLDivElement | null>(null);
 
   const isHandlePage = () => {
     setIsCaret(!isCaret);
   };
+
+  useClickOutside({ isCaret, setIsCaret, caret: caretRef });
 
   return (
     <Dialog
@@ -66,7 +70,7 @@ const HeaderDialog = (props: DialogType) => {
                       onClick={() => isHandlePage()}
                     >
                       Pages
-                      <span>
+                      <span ref={caretRef}>
                         {isCaret ? <AiOutlineCaretUp /> : <AiFillCaretDown />}
                       </span>
                     </Disclosure.Button>

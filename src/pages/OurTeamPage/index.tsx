@@ -1,17 +1,15 @@
 import Breadcrumb from "../../components/Breadcrumb";
-import AboutUs from "../../components/AboutUs";
 import OurTeam from "../../components/OurTeam";
 import Footer from "../../components/Footer";
 
-const About = () => {
+const OurTeamPage = () => {
   return (
     <section>
-      <Breadcrumb title="About Us" activePage="about" />
-      <AboutUs />
-      <OurTeam />
+      <Breadcrumb title="Our Team" activePage="our team" />
+      <OurTeam className="!mt-5" />
       <Footer />
     </section>
   );
 };
 
-export default About;
+export default OurTeamPage;

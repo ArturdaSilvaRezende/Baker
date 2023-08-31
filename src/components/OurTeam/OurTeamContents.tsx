@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -22,8 +23,10 @@ const OurTeamContents = () => {
     }
   };
 
+  useAnimateScroll();
+
   return (
-    <C.OurTeamContents>
+    <C.OurTeamContents className="scroll-element">
       {OurTeamMap.map((item, index) => (
         <figure key={item.id}>
           <button onClick={() => toggleCaption(index)}>

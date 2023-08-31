@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { BsChevronRight } from "react-icons/bs";
@@ -8,9 +9,10 @@ import * as C from "./style";
 
 const ClientsReviewContainer = () => {
   const [clientsList] = useState(ClientsReviewList);
+  useAnimateScroll();
 
   return (
-    <C.ClientsReviewContainer>
+    <C.ClientsReviewContainer className="scroll-element">
       <Swiper
         className="mySwiper"
         spaceBetween={30}

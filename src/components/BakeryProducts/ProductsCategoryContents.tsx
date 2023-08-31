@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import { BsFillEyeFill } from "react-icons/bs";
 import { BsFillEyeSlashFill } from "react-icons/bs";
 import BakerProductsList from "./BakeryProductsList";
@@ -9,6 +10,8 @@ import "../../assets/style/animations.css";
 const ProductsCategoryContents = () => {
   const [productsList] = useState(BakerProductsList);
   const [activeContents, setActiveContents] = useState(0);
+
+  useAnimateScroll();
 
   const handleToggleShowContent = (cardId: number) => {
     setActiveContents(cardId);
@@ -23,7 +26,7 @@ const ProductsCategoryContents = () => {
   const isActiveContent = (item: number) => item === activeContents;
 
   return (
-    <C.ProductsCategoryContents>
+    <C.ProductsCategoryContents className="scroll-element">
       {productsList.map((item) => (
         <C.CategoryFigure
           $isactiveitem={isActiveContent(item.id)}

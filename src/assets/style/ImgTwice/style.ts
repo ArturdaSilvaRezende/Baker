@@ -4,6 +4,10 @@ import tw from "twin.macro";
 export const ImgTwice = styled.div`
   ${tw`flex w-3/6 relative`}
 
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, -160px, 0);
+
   img {
     ${tw`rounded-2xl relative`}
     width: 40%;

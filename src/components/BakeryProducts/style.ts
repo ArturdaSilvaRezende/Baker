@@ -17,6 +17,10 @@ export const BakeryProductsContact = styled.div`
   ${tw`flex items-center justify-between py-12 px-9 rounded-2xl`}
   background-color: var(--primary);
 
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 200px, 0);
+
   h2 {
     ${tw`text-white text-6xl font-bold w-1/2`}
     font-family: 'Playfair Display', serif;
@@ -103,6 +107,10 @@ export const BakeryProductsContact = styled.div`
 
 export const ProductsCategoryContents = styled.div`
   ${tw`flex gap-3.5 pb-24 sm:flex-wrap`}
+
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 120px, 0);
 `;
 
 export const CategoryFigure = styled.figure<Props>`

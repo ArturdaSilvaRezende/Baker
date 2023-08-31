@@ -1,8 +1,11 @@
+import useAnimateScroll from "../../hooks/useAnimateScroll";
 import * as C from "./style";
 
 const ClientsReviewNewsletter = () => {
+  useAnimateScroll();
+
   return (
-    <C.ClientsReviewNewsletter>
+    <C.ClientsReviewNewsletter className="scroll-element">
       <h3>
         <span>Subscribe Our</span>
         <span>Newsletter</span>

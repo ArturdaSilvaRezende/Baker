@@ -96,3 +96,10 @@
     max-height: 0;
   }
 }
+
+/*============= scroll animation =============*/
+
+.visible {
+  opacity: 1 !important;
+  transform: translate3d(0, 0px, 0) !important;
+}

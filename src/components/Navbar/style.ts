@@ -2,25 +2,39 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Dialog } from "@headlessui/react";
 
-export const Navbar = styled.header`
-  ${tw`px-4`}
-  position: absolute;
+interface Props {
+  $isvisiblemenu: boolean;
+}
+
+export const Navbar = styled.header<Props>`
+  ${tw`duration-500`}
+  background-color:  ${(props) =>
+    props.$isvisiblemenu ? "var(--dark)" : "transparent"};
+  padding: ${(props) => (props.$isvisiblemenu ? "10px 0" : "0")};
+  position: ${(props) => (props.$isvisiblemenu ? "fixed" : "absolute")};
   left: 50%;
   transform: translateX(-50%);
-  top: 90px;
+  top: ${(props) => (props.$isvisiblemenu ? "0" : "90px")};
   width: 100%;
   z-index: 998;
 
-  @media screen and (min-width: 768px) and (max-width: 992px) {
-    top: 80px;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
+    top: ${(props) => (props.$isvisiblemenu ? "0" : "90px")};
   }
 
   @media screen and (min-width: 600px) and (max-width: 767px) {
-    top: 15px;
+    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
+    left: 0;
+    transform: translateX(0);
+    top: ${(props) => (props.$isvisiblemenu ? "0" : "20px")};
   }
 
   @media screen and (max-width: 599px) {
-    top: 10px;
+    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
+    left: 0;
+    transform: translateX(0);
+    top: ${(props) => (props.$isvisiblemenu ? "0" : "10px")};
   }
 `;
 
@@ -29,7 +43,8 @@ export const HeaderNav = styled.nav`
 
   .header__logo {
     ${tw`flex xl:flex-1 w-full`}
-
+    position: relative;
+    top: -5px;
     color: var(--primary);
 
     a {
@@ -50,7 +65,7 @@ export const HeaderNav = styled.nav`
   }
 
   .header__popover {
-    ${tw`hidden xl:flex xl:gap-x-12 mt-5`}
+    ${tw`hidden xl:flex xl:gap-x-10 mt-3`}
 
     .header__popover-contents {
       ${tw`relative`}
@@ -101,11 +116,11 @@ export const HeaderNav = styled.nav`
     ${tw`hidden xl:flex xl:flex-1 xl:justify-end items-center`}
 
     div {
-      ${tw`mr-5 border border-white p-4 rounded-full`}
+      ${tw`mr-3 border border-white p-3 rounded-full`}
 
       svg {
         color: var(--primary);
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -119,7 +134,7 @@ export const HeaderNav = styled.nav`
 
         &:last-child {
           ${tw`text-white`}
-          font-size: 1.2rem;
+          font-size: 1em;
         }
       }
     }

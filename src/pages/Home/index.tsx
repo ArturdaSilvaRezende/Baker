@@ -1,7 +1,9 @@
 import AboutUs from "../../components/AboutUs";
 import AnimatedCounter from "../../components/AnimatedCounter";
 import BakeryProducts from "../../components/BakeryProducts";
+import ButtonBackToTop from "../../components/ButtonBackToTop";
 import ClientsReview from "../../components/ClientsReview";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import OurServices from "../../components/OurServices";
 import OurTeam from "../../components/OurTeam";
@@ -20,6 +22,8 @@ const Home = () => {
       <OurServices />
       <OurTeam />
       <ClientsReview />
+      <Footer />
+      <ButtonBackToTop />
     </main>
   );
 };

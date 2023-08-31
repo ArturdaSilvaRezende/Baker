@@ -2,19 +2,18 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const AboutUs = styled.section`
-  ${tw`container mx-auto flex relative my-36 md:my-24`}
+  ${tw`container mx-auto flex relative mt-36`}
 
   @media screen and (max-width: 992px) {
     ${tw`flex-col`}
-  }
-
-  @media screen and (max-width: 599px) {
-    ${tw`my-24`}
   }
 `;
 
 export const AboutUsDescription = styled.div`
   ${tw`flex w-3/6 flex-col`}
+  opacity: 0;
+  transition: 0.9s;
+  transform: translate3d(0, 160px, 0);
 
   .about__section {
     ${tw`text-2xl mb-4`}

@@ -2,9 +2,13 @@ import CustomTitle from "../CustomTitle";
 import OurTeamContents from "./OurTeamContents";
 import * as C from "./style";
 
-const OurTeam = () => {
+interface MyComponentProps {
+  className?: string;
+}
+
+const OurTeam = (props: MyComponentProps) => {
   return (
-    <C.OurTeam>
+    <C.OurTeam className={props.className}>
       <CustomTitle
         subtitle="Our Team"
         title="We're Super Professional At Our Skills"
