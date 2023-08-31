@@ -28,10 +28,16 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
 
+    img {
+        display: block;
+        width: 100%;
+    }
+    
     :root {
         --primary: #EAA636;
         --secondary: #545454;
         --light: #FDF5EB;
+        --white: #fff;
         --dark: #1E1916;
     }
 `;

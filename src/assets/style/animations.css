@@ -1,0 +1,105 @@
+/*============= animation - fade =============*/
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*============= animation - slide =============*/
+
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+/*============= animation - height =============*/
+
+.showContentsHeight {
+  animation-name: showContentsHeight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes showContentsHeight {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
+
+.hideContentsHeight {
+  animation-name: hideContentsHeight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes hideContentsHeight {
+  0% {
+    max-height: 100%;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
+/*============= scroll animation =============*/
+
+.visible {
+  opacity: 1 !important;
+  transform: translate3d(0, 0px, 0) !important;
+}
