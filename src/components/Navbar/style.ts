@@ -12,28 +12,24 @@ export const Navbar = styled.header<Props>`
     props.$isvisiblemenu ? "var(--dark)" : "transparent"};
   padding: ${(props) => (props.$isvisiblemenu ? "10px 0" : "0")};
   position: ${(props) => (props.$isvisiblemenu ? "fixed" : "absolute")};
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   top: ${(props) => (props.$isvisiblemenu ? "0" : "90px")};
-  width: 100%;
   z-index: 998;
 
+  @media screen and (max-width: 1024px) {
+    padding: 10px 20px;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
     top: ${(props) => (props.$isvisiblemenu ? "0" : "90px")};
   }
 
   @media screen and (min-width: 600px) and (max-width: 767px) {
-    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
-    left: 0;
-    transform: translateX(0);
     top: ${(props) => (props.$isvisiblemenu ? "0" : "20px")};
   }
 
   @media screen and (max-width: 599px) {
-    padding: ${(props) => (props.$isvisiblemenu ? "10px 20px" : "10px 20px")};
-    left: 0;
-    transform: translateX(0);
     top: ${(props) => (props.$isvisiblemenu ? "0" : "10px")};
   }
 `;
